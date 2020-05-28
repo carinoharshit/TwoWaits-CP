@@ -1,0 +1,9 @@
+def replaceGreatestInteger(List):
+    for i in range(size-1):
+        List[i] = max(List[i+1:])
+    return List
+size = int(input("Enter the size of List: "))
+List = []
+for i in range(size):
+    List.append(int(input("Enter element number " + str(i+1) + " in List: ")))
+print("List after replacing every element with greatest element on right side is: ", replaceGreatestInteger(List))

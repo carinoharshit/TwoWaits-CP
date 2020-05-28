@@ -1,0 +1,15 @@
+def House(List):
+    if len(List) == 2:
+        return max(List)
+    if len(List) == 1:
+        return List[0]
+    if len(List) == 3:
+        return max(List[1], List[0] + House(List[2:]))
+    return max(List[1] + House(List[3:]), List[0] + House(List[2:]))
+
+size = int(input("Enter number of Houses in a line: "))
+List = []
+
+for i in range(size):
+    List.append(int(input("Enter the value in house number: " + str(i + 1) + ": ")))
+print("Maximum stolen value from house is: ", House(List))
