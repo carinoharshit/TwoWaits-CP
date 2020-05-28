@@ -1,0 +1,12 @@
+size_tuple=int(input("Enter the size of tuple in List: "))
+size_list=int(input("Enter the size of List: "))
+List=[]
+for i in range(size_list):
+    print("Enter the element in tuple",i+1)
+    Tuple=[]
+    for j in range(size_tuple):
+        Tuple.append(int(input("Enter the element "+str(j+1)+" in Tuple:")))
+    List.append(tuple(Tuple))
+n=int(input("Enter the nth index about which sort the list"))
+List.sort(key=lambda x:x[n])
+print("Sorted list is:",List)
