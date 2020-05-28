@@ -1,0 +1,14 @@
+n=input("Enter a String: ")
+result=[]
+
+def per(d, i, l):  
+    if i == l:  
+        result.append(''.join(d) ) 
+    else:  
+        for j in range(i, l):  
+            d[i], d[j] = d[j], d[i]  
+            per(d, i + 1, l)  
+            d[i], d[j] = d[j], d[i]   
+
+per(list(n),0,len(n))
+print(str(result))

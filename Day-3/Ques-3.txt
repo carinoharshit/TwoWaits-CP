@@ -1,0 +1,10 @@
+n=input("Enter a String: ")
+
+def dup(s):
+    d="";
+    for i in n:
+        if i not in d:
+            d=d+i
+    return d
+
+print(dup(n))
